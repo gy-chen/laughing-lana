@@ -19,3 +19,26 @@ NoteStorage
 不同的註記資料。
 
 NoteStorage的資料輸出格式可以為資料庫的Cursor或是JSon型態資料。
+
+註記資料轉換JSON
+================
+
+註記資料轉換的JSON格式為：
+
+::
+
+  {"timestamp": 筆記簿的timestamp,
+    "title": 筆記簿標題
+    "content": [{ "index": 筆記順序, "content": 筆記內容, "type": 筆記種類},
+    ...]
+  }
+
+筆記種類的代表意義為：
+
+::
+
+  1 => 文字
+  2 => 畫布
+  3 => 相片
+
+筆記內容皆用Base64轉換成ASCII可編碼內容。

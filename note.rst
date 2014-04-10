@@ -12,6 +12,14 @@ NoteActivity
 用者使用內建的輸入法輸入文字。當使用者輸入好要註記的資料，此Activity會將其
 註記儲存，使用者往後可讀取先前儲存的內容，並再進一步編輯。
 
+啟用NoteActivity
+----------------
+
+NoteActivity沒有設定<intent-filter>，因此需使用指定類別的Intent來啟用它，
+啟用NoteActivity可選帶Extra資料NoteActivity.EXTRA_NOTE_TIMESTAMP，此Extra
+資料可指定讀取的註記簿，如果未傳入此資料，NoteActivity預設會使用目前時間創造
+一個新的註記簿。
+
 NoteStorage
 ===========
 
